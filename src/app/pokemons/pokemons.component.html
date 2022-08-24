@@ -1,0 +1,18 @@
+<h2>My Pokemons</h2>
+<ul class="heroes">
+  <li *ngFor="let pokemon of pokemons">
+    <!-- <button
+      type="button"
+      (click)="onSelect(pokemon)"
+      [class.selected]="pokemon === selectedPokemon"
+    >
+      <span class="badge">{{ pokemon.name }}</span>
+      <span class="name">{{ pokemon.url }}</span>
+    </button> -->
+    <a routerLink="/detail/{{ pokemon.name }}">
+      <span class="badge">{{ pokemon.name }}</span>
+      <span class="name">{{ pokemon.url }}</span>
+    </a>
+  </li>
+</ul>
+<!-- <app-pokemon-detail [pokemon]="selectedPokemon"></app-pokemon-detail> -->
